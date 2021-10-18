@@ -1,7 +1,7 @@
 import React from 'react';
-import { Title } from '../components/title/Title';
+import Title from '../components/title/Title';
 
-const TestScreen = props => {
+const TestScreen = ({ navigation }) => {
   return (
     <Title>Awesome title</Title>
   )
