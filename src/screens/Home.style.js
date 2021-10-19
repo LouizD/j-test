@@ -7,7 +7,7 @@ const styleSheet = StyleSheet.create({
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
     paddingTop: Platform.OS === 'ios' ? '10%' : null,
-
+    paddingHorizontal: 10,
   },
 });
 
