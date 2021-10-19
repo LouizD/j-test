@@ -1,7 +1,8 @@
 const colors = {
   red1: "#EE737F",
   red2: "#E87C87",
-  white: "#FFF"
+  white: "#FFF",
+  black: '#000',
 }
 
 const dummyData = {
