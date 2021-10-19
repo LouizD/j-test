@@ -49,7 +49,7 @@ const PatientInfo = props => {
 
   return (
     <View>
-      <Text>{dummyData.patientName}</Text>
+      <Text>Patient : {dummyData.patientName}</Text>
 
       <View style={styleSheet.links}>
         <PatientLink 
