@@ -3,6 +3,8 @@ import { View, Text } from 'react-native';
 import Title from '../components/title/Title';
 import Feather from 'react-native-vector-icons/Feather';
 import PatientInfo from '../components/PatientInfo/PatientInfo';
+import PatientPictures from '../components/PatientPictures/PatientPictures';
+
 import styleSheet from './Home.style';
 
 const HomeScreen = ({ navigation }) => {
@@ -14,6 +16,13 @@ const HomeScreen = ({ navigation }) => {
       </View>
       <View style={styleSheet.container}>
         <PatientInfo />
+        <Text style={styleSheet.title}>Photos</Text>
+        <View style={styleSheet.pictures}>
+          <PatientPictures />
+          <PatientPictures />
+          <PatientPictures />
+          <PatientPictures />
+        </View>
       </View>
     </View>
   )

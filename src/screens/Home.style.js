@@ -31,6 +31,12 @@ const styleSheet = StyleSheet.create({
     color: colors.white,
     fontSize: 25,
     fontWeight: "600",
+  },
+  pictures: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
   }
 });
 
