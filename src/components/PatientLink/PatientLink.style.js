@@ -8,11 +8,22 @@ const styleSheet = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textActive: {
+    color: colors.black,
+  },
+  textInactive: {
+    color: 'grey',
+  },
   text: {
     marginBottom: 5,
   },
-  hairline: {
+  hairlineActive: {
     backgroundColor: colors.red1,
+  },
+  hairlineInactive: {
+    backgroundColor: 'grey',
+  },
+  hairline: {
     borderRadius: 5,
     margin: 'auto',
     width: 20,

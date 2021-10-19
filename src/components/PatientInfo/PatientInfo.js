@@ -53,16 +53,19 @@ const PatientInfo = props => {
 
       <View style={styleSheet.links}>
         <PatientLink 
+          isActive={ show === "profile"}
           onPressLink={() => {
             setShow("profile")
           }}
           value="Profil"/>
         <PatientLink 
+          isActive={ show === "info"}
           onPressLink={() => {
             setShow("info")
           }}
           value="Informations" />
-        <PatientLink 
+        <PatientLink
+          isActive={ show === "contact"}
           onPressLink={() => {
             setShow("contact")
           }}
