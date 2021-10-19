@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CardInfo from '../CardInfo/CardInfo';
 import { View, Text, TouchableOpacity } from 'react-native';
+import PatientLink from '../PatientLink/PatientLink';
 import { dummyData } from '../../_var';
 
 const PatientInfo = props => {
@@ -49,21 +50,21 @@ const PatientInfo = props => {
       <Text>{dummyData.patientName}</Text>
 
       <View>
-        <TouchableOpacity onPress={() => {
-          setShow("profile")
-        }}>
-          <Text>Profil</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          setShow("info")
-        }}>
-          <Text>Informations</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          setShow("contact")
-        }}>
-          <Text>Contact</Text>
-        </TouchableOpacity>
+        <PatientLink 
+          onPressLink={() => {
+            setShow("profile")
+          }}
+          value="Profil"/>
+        <PatientLink 
+          onPressLink={() => {
+            setShow("info")
+          }}
+          value="Informations" />
+        <PatientLink 
+          onPressLink={() => {
+            setShow("contact")
+          }}
+          value="Contact" />
       </View>
       {content}
     </View>
