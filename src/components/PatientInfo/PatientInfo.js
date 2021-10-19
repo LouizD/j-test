@@ -4,6 +4,8 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import PatientLink from '../PatientLink/PatientLink';
 import { dummyData } from '../../_var';
 
+import styleSheet from './PatientInfo.style';
+
 const PatientInfo = props => {
   const [show, setShow] = useState("profile");
 
@@ -49,7 +51,7 @@ const PatientInfo = props => {
     <View>
       <Text>{dummyData.patientName}</Text>
 
-      <View>
+      <View style={styleSheet.links}>
         <PatientLink 
           onPressLink={() => {
             setShow("profile")
