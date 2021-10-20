@@ -26,6 +26,12 @@ const styleSheet = StyleSheet.create({
   tabText: {
     fontSize: 10,
     color: colors.red3,
+    marginTop: 5,
+  },
+  dot: {
+    width: 5,
+    height: 5,
+    borderRadius: 10,
     marginTop: 5
   }
 });
