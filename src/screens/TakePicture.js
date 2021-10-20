@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { StyleSheet, Text, View, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import { Camera } from 'expo-camera';
+import HelpModal from '../components/HelpModal/HelpModal';
 
 import styleSheet from './TakePicture.style';
 
@@ -26,50 +27,29 @@ const TakePictureScreen = ({ navigation }) => {
   }
 
   return (
-    <TouchableWithoutFeedback style={{backgroundColor: '#000', flex: 1}} onPress={() => setShowHelp(false)}>
+    <TouchableWithoutFeedback onPress={() => setShowHelp(false)}>
       <View style={styleSheet.container}>
         <TouchableOpacity style={styleSheet.back} onPress={() => {navigation.goBack();}}>
           <AntDesign name={"left"} color={'white'} size={25} />
         </TouchableOpacity>
         <Camera style={styleSheet.camera} type={type} ref={ref => { setCameraRef(ref); }}>
-          <View style={{
-            flex: 1,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            margin: 20,
-            justifyContent: 'space-around',
-            alignItems: 'center'
-          }}>
-          <TouchableOpacity style={{alignSelf: 'flex-end', alignItems: 'center'}} onPress={() => {setShowHelp(!showHelp)}}>
+          <View style={styleSheet.buttonsContainer}>
+          <TouchableOpacity style={styleSheet.helpButton} onPress={() => { setShowHelp(!showHelp)} }>
             <AntDesign name={"infocirlce"} color={'white'} size={25} />
           </TouchableOpacity>
-            <TouchableOpacity style={{alignSelf: 'flex-end', alignItems: 'center'}} onPress={async() => {
+            <TouchableOpacity style={styleSheet.takePicButton} onPress={async() => {
                 if(cameraRef){
                   let photo = await cameraRef.takePictureAsync();
                   console.log('photo', photo);
                 }
               }}>
-              <View style={{
-                borderWidth: 2,
-                borderRadius:"50%",
-                borderColor: 'white',
-                height: 50,
-                width:50,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center' }}>
-                <View style={{
-                  borderWidth: 2,
-                  borderRadius:"50%",
-                  borderColor: 'white',
-                  height: 40,
-                  width:40,
-                  backgroundColor: 'white'}} >
+              <View style={styleSheet.takePicButtonCircle1}>
+                <View style={styleSheet.takePicButtonCircle2} >
                 </View>
               </View>
             </TouchableOpacity>
             <TouchableOpacity
-              style={{alignSelf: 'flex-end'}}
+              style={styleSheet.flipButton}
               onPress={() => {
                 setType(
                   type === Camera.Constants.Type.back
@@ -81,7 +61,7 @@ const TakePictureScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </Camera>
-        {showHelp && <View style={{ backgroundColor: 'white', height: '40%', position: 'absolute', bottom: 0, left:0, right: 0, borderTopLeftRadius: 50, borderTopRightRadius: 50, alignItems: 'center' }}><View style={{backgroundColor: 'grey', width: 30, height: 4, borderRadius: 5, marginTop: 10}}></View><Text>Ceci est une aide</Text></View>}
+        {showHelp && <HelpModal />}
       </View>
     </TouchableWithoutFeedback>
   )
