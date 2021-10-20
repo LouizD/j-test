@@ -5,7 +5,8 @@ const colors = {
   white: "#FFF",
   black: '#000',
   green1: '#F3F6F6',
-  green2: '#063F43'
+  green2: '#063F43',
+  grey: '#E6E6E6'
 }
 
 const dummyData = {

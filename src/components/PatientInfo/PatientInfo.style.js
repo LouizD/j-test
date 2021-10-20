@@ -13,8 +13,22 @@ const styleSheet = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 20,
-    marginBottom: 10,
+    //marginBottom: 10,
   },
+  line: {
+    height: 5,
+    width: '100%', 
+    backgroundColor: colors.grey,
+    borderRadius: 5,
+    position:'absolute',
+    bottom: 0,
+    left: 0,
+    zIndex: -1
+  },
+  text: {
+    marginTop: 5,
+    color: colors.black
+  }
 });
 
 export default styleSheet;

@@ -10,38 +10,36 @@ const PatientInfo = props => {
   const [show, setShow] = useState("profile");
 
   let content = (
-    <CardInfo>
-        <Text>{dummyData.patientStatus}</Text>
-        <Text>{dummyData.patientMeeting}</Text>
-      </CardInfo>
+    <View>
+        <Text style={styleSheet.text}>{dummyData.patientStatus}</Text>
+        <Text style={styleSheet.text}>{dummyData.patientMeeting}</Text>
+      </View>
   )
 
   switch(show) {
     case 'profile':
       content = (
-        <CardInfo>
-            <Text>{dummyData.patientStatus}</Text>
-            <Text>{dummyData.patientMeeting}</Text>
-          </CardInfo>
+        <View>
+            <Text style={styleSheet.text}>{dummyData.patientStatus}</Text>
+            <Text style={styleSheet.text}>{dummyData.patientMeeting}</Text>
+          </View>
       )
     break;
     case 'info':
       content = (
-        <CardInfo>
-          <Text>Informations</Text>
-          <Text>Références : {dummyData.patientId}</Text>
-          <Text>Date de naissance : {dummyData.patientBirthday}</Text>
-          <Text>Âge : {dummyData.patientAge}</Text>
-        </CardInfo>
+        <View>
+          <Text style={styleSheet.text}>Références : {dummyData.patientId}</Text>
+          <Text style={styleSheet.text}>Date de naissance : {dummyData.patientBirthday}</Text>
+          <Text style={styleSheet.text}>Âge : {dummyData.patientAge}</Text>
+        </View>
       )
     break;
     case 'contact':
       content = (
-        <CardInfo>
-          <Text>Contact</Text>
-          <Text>E-mail : {dummyData.patientEmail}</Text>
-          <Text>Téléphone portable : {dummyData.patientPhone}</Text>
-        </CardInfo>
+        <View>
+          <Text style={styleSheet.text}>E-mail : {dummyData.patientEmail}</Text>
+          <Text style={styleSheet.text}>Téléphone portable : {dummyData.patientPhone}</Text>
+        </View>
       )
     break;
   }
@@ -70,6 +68,7 @@ const PatientInfo = props => {
             setShow("contact")
           }}
           value="Contact" />
+          <View style={styleSheet.line}></View>
       </View>
       {content}
     </View>

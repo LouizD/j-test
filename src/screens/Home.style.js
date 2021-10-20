@@ -32,6 +32,11 @@ const styleSheet = StyleSheet.create({
     fontSize: 25,
     fontWeight: "600",
   },
+  title: {
+    fontSize: 16,
+    marginTop: 20,
+    marginBottom: 10,
+  },
   pictures: {
     display: 'flex',
     flexDirection: 'row',

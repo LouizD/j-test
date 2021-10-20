@@ -6,7 +6,7 @@ import {colors} from '../../_var'
 
 const Title = props => {
   return (
-    <Text style={styleSheet.textStyle}>
+    <Text style={[styleSheet.textStyle, props.style]}>
       {props.children}
     </Text>
   )

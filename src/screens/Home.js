@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
       </View>
       <View style={styleSheet.container}>
         <PatientInfo />
-        <Text style={styleSheet.title}>Photos</Text>
+        <Title style={styleSheet.title}>Photos</Title>
         <View style={styleSheet.pictures}>
           <PatientPictures />
           <PatientPictures />
