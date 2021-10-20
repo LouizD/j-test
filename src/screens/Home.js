@@ -32,14 +32,18 @@ const HomeScreen = ({ navigation }) => {
           value={"Valider la consulation"}
           colorButton={colors.red1}
           colorTxt={colors.white}
+          style={{marginTop: 20}}
         />
         <Button
           onPress={() => console.log('Patient non elligible')}
           value={"Patient non elligible"}
           colorButton={colors.green1}
           colorTxt={colors.green2}
+          style={{marginTop: 20}}
         />
-        <Tabs />
+        <View style={styleSheet.tabs}>
+          <Tabs />
+        </View>
       </View>
     </View>
   )

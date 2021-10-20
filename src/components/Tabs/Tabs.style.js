@@ -4,7 +4,6 @@ import { colors } from '../../_var';
 
 const styleSheet = StyleSheet.create({
   tabContainer: {
-    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

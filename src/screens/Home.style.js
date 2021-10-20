@@ -5,7 +5,6 @@ import { colors } from '../_var';
 const styleSheet = StyleSheet.create({
   screen: {
     backgroundColor: colors.red1,
-    flex: 1,
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
     paddingTop: Platform.OS === 'ios' ? '10%' : null,
@@ -14,10 +13,11 @@ const styleSheet = StyleSheet.create({
     backgroundColor: colors.white,
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
+    display: 'flex',
     padding: 20,
     marginTop: 20,
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   header: {
     display: 'flex',
@@ -42,6 +42,12 @@ const styleSheet = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between'
+  },
+  tabs: {
+    position: 'absolute',
+    bottom: '20%',
+    left: 10,
+    right: 10,
   }
 });
 
