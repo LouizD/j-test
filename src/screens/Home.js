@@ -5,6 +5,7 @@ import Button from '../components/Buttons/Buttons';
 import Feather from 'react-native-vector-icons/Feather';
 import PatientInfo from '../components/PatientInfo/PatientInfo';
 import PatientPictures from '../components/PatientPictures/PatientPictures';
+import Tabs from '../components/Tabs/Tabs';
 
 
 import styleSheet from './Home.style';
@@ -38,6 +39,7 @@ const HomeScreen = ({ navigation }) => {
           colorButton={colors.green1}
           colorTxt={colors.green2}
         />
+        <Tabs />
       </View>
     </View>
   )
