@@ -1,3 +1,4 @@
+import { setStatusBarHidden } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Dimensions, Platform } from 'react-native';
 import { colors } from '../_var';
@@ -24,7 +25,7 @@ const styleSheet = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop:30,
+    marginTop: 10,
     paddingHorizontal: 20,
   },
   welcome: {
@@ -44,10 +45,9 @@ const styleSheet = StyleSheet.create({
     justifyContent: 'space-between'
   },
   tabs: {
-    position: 'absolute',
-    bottom: '20%',
-    left: 10,
-    right: 10,
+    marginTop: 20,
+    marginBottom: 100,
+    width: '100%'
   }
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import Title from '../components/title/Title';
 import Button from '../components/Buttons/Buttons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -19,31 +19,33 @@ const HomeScreen = ({ navigation }) => {
         <Feather name={'log-out'} size={20} color="#fff" />
       </View>
       <View style={styleSheet.container}>
-        <PatientInfo />
-        <Title style={styleSheet.title}>Photos</Title>
-        <View style={styleSheet.pictures}>
-          <PatientPictures />
-          <PatientPictures />
-          <PatientPictures />
-          <PatientPictures />
-        </View>
-        <Button
-          onPress={() => console.log('Valider la consulation')}
-          value={"Valider la consulation"}
-          colorButton={colors.red1}
-          colorTxt={colors.white}
-          style={{marginTop: 20}}
-        />
-        <Button
-          onPress={() => console.log('Patient non elligible')}
-          value={"Patient non elligible"}
-          colorButton={colors.green1}
-          colorTxt={colors.green2}
-          style={{marginTop: 20}}
-        />
-        <View style={styleSheet.tabs}>
-          <Tabs />
-        </View>
+        <ScrollView >
+            <PatientInfo />
+            <Title style={styleSheet.title}>Photos</Title>
+            <View style={styleSheet.pictures}>
+              <PatientPictures />
+              <PatientPictures />
+              <PatientPictures />
+              <PatientPictures />
+            </View>
+            <Button
+              onPress={() => console.log('Valider la consulation')}
+              value={"Valider la consulation"}
+              colorButton={colors.red1}
+              colorTxt={colors.white}
+              style={{marginTop: 20}}
+            />
+            <Button
+              onPress={() => console.log('Patient non elligible')}
+              value={"Patient non elligible"}
+              colorButton={colors.green1}
+              colorTxt={colors.green2}
+              style={{marginTop: 20}}
+            />
+          <View style={styleSheet.tabs}>
+            <Tabs />
+          </View>
+        </ScrollView>
       </View>
     </View>
   )
