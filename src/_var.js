@@ -4,6 +4,8 @@ const colors = {
   red3: "#FFB2BA",
   white: "#FFF",
   black: '#000',
+  green1: '#F3F6F6',
+  green2: '#063F43'
 }
 
 const dummyData = {

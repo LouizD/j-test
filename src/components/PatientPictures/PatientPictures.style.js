@@ -5,7 +5,7 @@ import { colors } from '../../_var';
 const styleSheet = StyleSheet.create({
   container: {
     width: '49%',
-    marginBottom: 
+    marginBottom: 20,
   },
   title: {
     fontSize: 18,
@@ -27,7 +27,7 @@ const styleSheet = StyleSheet.create({
     backgroundColor: "#FAFBFB",
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'center',
     height: 80,
   }

@@ -1,11 +1,14 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import Title from '../components/title/Title';
+import Button from '../components/Buttons/Buttons';
 import Feather from 'react-native-vector-icons/Feather';
 import PatientInfo from '../components/PatientInfo/PatientInfo';
 import PatientPictures from '../components/PatientPictures/PatientPictures';
 
+
 import styleSheet from './Home.style';
+import { colors } from '../_var';
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -23,6 +26,18 @@ const HomeScreen = ({ navigation }) => {
           <PatientPictures />
           <PatientPictures />
         </View>
+        <Button
+          onPress={() => console.log('Valider la consulation')}
+          value={"Valider la consulation"}
+          colorButton={colors.red1}
+          colorTxt={colors.white}
+        />
+        <Button
+          onPress={() => console.log('Patient non elligible')}
+          value={"Patient non elligible"}
+          colorButton={colors.green1}
+          colorTxt={colors.green2}
+        />
       </View>
     </View>
   )
