@@ -6,7 +6,6 @@ import TakePictureScreen from './src/screens/TakePictureScreen/TakePictureScreen
 
 const Stack = createNativeStackNavigator();
 
-
 export default function App() {
   return (
     <NavigationContainer>

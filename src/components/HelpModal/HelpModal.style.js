@@ -5,7 +5,7 @@ import { colors } from '../../_var';
 const styleSheet = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    height: '40%',
+    height: '50%',
     position: 'absolute',
     bottom: 0,
     left:0,
@@ -14,12 +14,28 @@ const styleSheet = StyleSheet.create({
     borderTopRightRadius: 50,
     alignItems: 'center'
   },
+  containerTxt: {
+    width: '80%',
+    marginTop: 20,
+  },
+  txt: {
+    fontSize: 16,
+    marginTop: 5,
+  },
   line: {
     backgroundColor: 'grey',
     width: 30,
     height: 4,
     borderRadius: 5,
     marginTop: 10
+  },
+  imgContainer: {
+    marginTop: 10,
+    height: '50%'
+  },
+  img: {
+    width: '100%',
+    height: '100%'
   }
 })
 

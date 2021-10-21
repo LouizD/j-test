@@ -1,12 +1,22 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+import { smile } from '../../../assets/smile.png'
 import styleSheet from './HelpModal.style';
 
-const HelpModal = () => {
+const HelpModal = props => {
   return(
     <View style={styleSheet.container}>
       <View style={styleSheet.line}></View>
-      <Text>Ceci est une aide</Text>
+      <View style={styleSheet.containerTxt}>
+        <Text style={styleSheet.txt}>{props.text1}</Text>
+        <Text style={styleSheet.txt}>{props.text2}</Text>
+        <View style={styleSheet.imgContainer}>
+          <Image
+            style={styleSheet.img}
+            source={require('../../../assets/smile.png')}
+          />
+        </View>
+      </View>
     </View>
   )
 }

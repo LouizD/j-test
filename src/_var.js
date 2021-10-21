@@ -21,4 +21,9 @@ const dummyData = {
   patientPhone: "06 25 65 58 87"
 }
 
-export { colors, dummyData };
+const help = {
+  description: "Capturez entièrement le sourire du patient en maintenant les dents serrées.",
+  advice: "Astuce: posez votre portable en mode retardateur contre un support, écartez vos joues à l’aide de vos doigts.",
+}
+
+export { colors, dummyData, help };

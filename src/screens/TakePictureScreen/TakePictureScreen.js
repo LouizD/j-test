@@ -4,6 +4,8 @@ import { Text, View, TouchableOpacity, TouchableWithoutFeedback } from 'react-na
 import { Camera } from 'expo-camera';
 import HelpModal from '../../components/HelpModal/HelpModal';
 
+import { help } from '../../_var';
+
 import styleSheet from './TakePictureScreen.style';
 
 const TakePictureScreen = ({ navigation }) => {
@@ -61,7 +63,7 @@ const TakePictureScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </Camera>
-        {showHelp && <HelpModal />}
+        {showHelp && <HelpModal text1={help.description} text2={help.advice}/>}
       </View>
     </TouchableWithoutFeedback>
   )
