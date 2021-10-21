@@ -10,7 +10,7 @@ const PatientInfo = props => {
   const [show, setShow] = useState("profile");
 
   let content = (
-    <View>
+    <View style={styleSheet.container}>
         <Text style={styleSheet.text}>{dummyData.patientStatus}</Text>
         <Text style={styleSheet.text}>{dummyData.patientMeeting}</Text>
       </View>
@@ -19,7 +19,7 @@ const PatientInfo = props => {
   switch(show) {
     case 'profile':
       content = (
-        <View>
+        <View style={styleSheet.container}>
             <Text style={styleSheet.text}>{dummyData.patientStatus}</Text>
             <Text style={styleSheet.text}>{dummyData.patientMeeting}</Text>
           </View>
@@ -27,7 +27,7 @@ const PatientInfo = props => {
     break;
     case 'info':
       content = (
-        <View>
+        <View style={styleSheet.container}>
           <Text style={styleSheet.text}>Références : {dummyData.patientId}</Text>
           <Text style={styleSheet.text}>Date de naissance : {dummyData.patientBirthday}</Text>
           <Text style={styleSheet.text}>Âge : {dummyData.patientAge}</Text>
@@ -36,7 +36,7 @@ const PatientInfo = props => {
     break;
     case 'contact':
       content = (
-        <View>
+        <View style={styleSheet.container}>
           <Text style={styleSheet.text}>E-mail : {dummyData.patientEmail}</Text>
           <Text style={styleSheet.text}>Téléphone portable : {dummyData.patientPhone}</Text>
         </View>

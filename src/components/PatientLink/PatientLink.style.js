@@ -21,7 +21,7 @@ const styleSheet = StyleSheet.create({
     backgroundColor: colors.red1,
   },
   hairlineInactive: {
-    backgroundColor: colors.grey,
+    backgroundColor: colors.grey1,
   },
   hairline: {
     borderRadius: 5,

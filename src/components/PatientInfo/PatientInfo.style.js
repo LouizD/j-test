@@ -3,6 +3,14 @@ import { StyleSheet, Dimensions, Platform } from 'react-native';
 import { colors } from '../../_var';
 
 const styleSheet = StyleSheet.create({
+  container: {
+    backgroundColor: colors.grey2,
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius:5,
+    padding: 10,
+    minHeight: 90,
+
+  },
   patientName: {
     fontSize: 18,
     fontWeight: '500',
@@ -13,12 +21,11 @@ const styleSheet = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 20,
-    //marginBottom: 10,
   },
   line: {
     height: 5,
     width: '100%', 
-    backgroundColor: colors.grey,
+    backgroundColor: colors.grey1,
     borderRadius: 5,
     position:'absolute',
     bottom: 0,
