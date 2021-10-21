@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text } from 'react-native';
 import styleSheet from './HelpModal.style';
 
-const HelpModal = (props) => {
+const HelpModal = () => {
   return(
     <View style={styleSheet.container}>
       <View style={styleSheet.line}></View>

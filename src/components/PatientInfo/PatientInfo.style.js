@@ -1,16 +1,8 @@
 import React from 'react';
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { colors } from '../../_var';
 
 const styleSheet = StyleSheet.create({
-  container: {
-    backgroundColor: colors.grey2,
-    borderBottomLeftRadius: 5,
-    borderBottomRightRadius:5,
-    padding: 10,
-    minHeight: 90,
-
-  },
   patientName: {
     fontSize: 18,
     fontWeight: '500',
@@ -31,10 +23,6 @@ const styleSheet = StyleSheet.create({
     bottom: 0,
     left: 0,
     zIndex: -1
-  },
-  text: {
-    marginTop: 5,
-    color: colors.black
   }
 });
 

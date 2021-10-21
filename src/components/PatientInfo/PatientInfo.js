@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import PatientLink from '../PatientLink/PatientLink';
+import PatientDetail from '../PatientDetail/PatientDetail';
 import { dummyData } from '../../_var';
 
 import styleSheet from './PatientInfo.style';
@@ -8,38 +9,34 @@ import styleSheet from './PatientInfo.style';
 const PatientInfo = props => {
   const [show, setShow] = useState("profile");
 
-  let content = (
-    <View style={styleSheet.container}>
-        <Text style={styleSheet.text}>{dummyData.patientStatus}</Text>
-        <Text style={styleSheet.text}>{dummyData.patientMeeting}</Text>
-      </View>
-  )
+  let content;
 
   switch(show) {
     case 'profile':
       content = (
-        <View style={styleSheet.container}>
-            <Text style={styleSheet.text}>{dummyData.patientStatus}</Text>
-            <Text style={styleSheet.text}>{dummyData.patientMeeting}</Text>
-          </View>
+        <PatientDetail 
+          text={[dummyData.patientStatus, dummyData.patientMeeting]}
+        />
       )
     break;
     case 'info':
       content = (
-        <View style={styleSheet.container}>
-          <Text style={styleSheet.text}>Références : {dummyData.patientId}</Text>
-          <Text style={styleSheet.text}>Date de naissance : {dummyData.patientBirthday}</Text>
-          <Text style={styleSheet.text}>Âge : {dummyData.patientAge}</Text>
-        </View>
+        <PatientDetail 
+          text={[`Références : ${dummyData.patientId}`, `Date de naissance : ${dummyData.patientBirthday}`, `Âge : ${dummyData.patientAge}`]} 
+        />
       )
     break;
     case 'contact':
       content = (
-        <View style={styleSheet.container}>
-          <Text style={styleSheet.text}>E-mail : {dummyData.patientEmail}</Text>
-          <Text style={styleSheet.text}>Téléphone portable : {dummyData.patientPhone}</Text>
-        </View>
+        <PatientDetail 
+          text={[`E-mail : ${dummyData.patientEmail}`, `Téléphone portable : ${dummyData.patientPhone}`]} 
+        />
       )
+    break;
+    default:
+      <PatientDetail 
+        text={[dummyData.patientStatus, dummyData.patientMeeting]} 
+      />
     break;
   }
 
@@ -47,7 +44,6 @@ const PatientInfo = props => {
   return (
     <View>
       <Text style={styleSheet.patientName}>Patient : {dummyData.patientName}</Text>
-
       <View style={styleSheet.links}>
         <PatientLink 
           isActive={ show === "profile"}
