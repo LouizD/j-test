@@ -3,9 +3,14 @@ import { StyleSheet} from 'react-native';
 import { colors } from '../../_var';
 
 const styleSheet = StyleSheet.create({
-  container: {
+  touchableArea: {
     width: '49%',
-    marginBottom: 20,
+    height: 'auto',
+  },
+  container: {
+    width: '100%',
+    height: 'auto',
+    marginBottom: 10
   },
   title: {
     fontSize: 18,
@@ -29,7 +34,7 @@ const styleSheet = StyleSheet.create({
     borderBottomRightRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 60,
+    padding: '10%'
   }
 });
 

@@ -19,33 +19,37 @@ const HomeScreen = ({ navigation }) => {
         <Feather name={'log-out'} size={20} color="#fff" />
       </View>
       <View style={styleSheet.container}>
-        <ScrollView >
-            <PatientInfo />
-            <Title style={styleSheet.title}>Photos</Title>
+          <PatientInfo />
+          <Title style={styleSheet.title}>Photos</Title>
+          <ScrollView style={{ height: '80%'}} persistentScrollbar={true} showsVerticalScrollIndicator={true}>
             <View style={styleSheet.pictures}>
               <PatientPictures />
               <PatientPictures />
               <PatientPictures />
               <PatientPictures />
+              <PatientPictures />
+              <PatientPictures />
             </View>
-            <Button
-              onPress={() => console.log('Valider la consulation')}
-              value={"Valider la consulation"}
-              colorButton={colors.red1}
-              colorTxt={colors.white}
-              style={{marginTop: 20}}
-            />
-            <Button
-              onPress={() => console.log('Patient non elligible')}
-              value={"Patient non elligible"}
-              colorButton={colors.green1}
-              colorTxt={colors.green2}
-              style={{marginTop: 20}}
-            />
-          <View style={styleSheet.tabs}>
+          </ScrollView>
+          <View style={styleSheet.bottom}>
+            <View style={styleSheet.buttonsContainer}>
+              <Button
+                onPress={() => console.log('Valider la consulation')}
+                value={"Valider la consulation"}
+                colorButton={colors.red1}
+                colorTxt={colors.white}
+                style={{width: '49%'}}
+              />
+              <Button
+                onPress={() => console.log('Patient non elligible')}
+                value={"Patient non elligible"}
+                colorButton={colors.green1}
+                colorTxt={colors.green2}
+                style={{width: '49%'}}
+              />
+            </View>
             <Tabs />
           </View>
-        </ScrollView>
       </View>
     </View>
   )

@@ -15,6 +15,7 @@ const styleSheet = StyleSheet.create({
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     display: 'flex',
+    flex: 1,
     padding: 20,
     marginTop: 20,
     width: '100%',
@@ -44,9 +45,15 @@ const styleSheet = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between'
   },
-  tabs: {
-    marginTop: 20,
-    marginBottom: 100,
+  buttonsContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20, 
+    marginBottom: 20
+  },
+  bottom: {
+    alignSelf: 'flex-end',
     width: '100%'
   }
 });
