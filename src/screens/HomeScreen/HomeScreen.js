@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
-import Title from '../components/title/Title';
-import Button from '../components/Buttons/Buttons';
+import Title from '../../components/Title/Title';
+import Button from '../../components/Buttons/Buttons';
 import Feather from 'react-native-vector-icons/Feather';
-import PatientInfo from '../components/PatientInfo/PatientInfo';
-import PatientPictures from '../components/PatientPictures/PatientPictures';
-import Tabs from '../components/Tabs/Tabs';
+import PatientInfo from '../../components/PatientInfo/PatientInfo';
+import PatientPictures from '../../components/PatientPictures/PatientPictures';
+import Tabs from '../../components/Tabs/Tabs';
 
 
-import styleSheet from './Home.style';
-import { colors } from '../_var';
+import styleSheet from './HomeScreen.style';
+import { colors } from '../../_var';
 
 const HomeScreen = ({ navigation }) => {
   return (

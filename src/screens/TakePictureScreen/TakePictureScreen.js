@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { Text, View, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import { Camera } from 'expo-camera';
-import HelpModal from '../components/HelpModal/HelpModal';
+import HelpModal from '../../components/HelpModal/HelpModal';
 
-import styleSheet from './TakePicture.style';
+import styleSheet from './TakePictureScreen.style';
 
 const TakePictureScreen = ({ navigation }) => {
   const [hasPermission, setHasPermission] = useState(null);

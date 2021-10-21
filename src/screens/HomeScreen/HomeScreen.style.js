@@ -1,7 +1,7 @@
 import { setStatusBarHidden } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Dimensions, Platform } from 'react-native';
-import { colors } from '../_var';
+import { colors } from '../../_var';
 
 const styleSheet = StyleSheet.create({
   screen: {
