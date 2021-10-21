@@ -19,20 +19,6 @@ const styleSheet = StyleSheet.create({
     shadowRadius: 2.62,
     elevation: 4,
   },
-  tab: {
-    alignItems: 'center'
-  },
-  tabText: {
-    fontSize: 10,
-    color: colors.red3,
-    marginTop: 5,
-  },
-  dot: {
-    width: 5,
-    height: 5,
-    borderRadius: 10,
-    marginTop: 5
-  }
 });
 
 export default styleSheet;

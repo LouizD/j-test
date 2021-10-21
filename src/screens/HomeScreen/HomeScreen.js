@@ -5,7 +5,7 @@ import Button from '../../components/Buttons/Buttons';
 import Feather from 'react-native-vector-icons/Feather';
 import PatientInfo from '../../components/PatientInfo/PatientInfo';
 import PatientPictures from '../../components/PatientPictures/PatientPictures';
-import Tabs from '../../components/Tabs/Tabs';
+import TabsBar from '../../components/TabsBar/TabsBar';
 
 
 import styleSheet from './HomeScreen.style';
@@ -48,7 +48,7 @@ const HomeScreen = ({ navigation }) => {
                 style={{width: '49%'}}
               />
             </View>
-            <Tabs />
+            <TabsBar />
           </View>
       </View>
     </View>
