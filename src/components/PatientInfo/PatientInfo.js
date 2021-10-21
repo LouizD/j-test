@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import CardInfo from '../CardInfo/CardInfo';
 import { View, Text, TouchableOpacity } from 'react-native';
 import PatientLink from '../PatientLink/PatientLink';
 import { dummyData } from '../../_var';
