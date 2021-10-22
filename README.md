@@ -11,7 +11,8 @@ This app was created with Expo. After cloning this project, you have to install 
 
 ## Start App
 
-<code>expo start</code>
+<code>expo start</code> or 
+<code>npm start</code>
 
 Then you can scan QR code with your own device or run a simulator.
 
