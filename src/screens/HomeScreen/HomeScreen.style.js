@@ -26,7 +26,7 @@ const styleSheet = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 10,
+    marginTop: 30,
     paddingHorizontal: 20,
   },
   welcome: {

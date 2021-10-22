@@ -8,7 +8,7 @@ import { help } from '../../_var';
 
 import styleSheet from './TakePictureScreen.style';
 
-const TakePictureScreen = ({ navigation }) => {
+const TakePictureScreen = ({ route, navigation }) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
   const [cameraRef, setCameraRef] = useState(null)
@@ -43,6 +43,12 @@ const TakePictureScreen = ({ navigation }) => {
                 if(cameraRef){
                   let photo = await cameraRef.takePictureAsync();
                   console.log('photo', photo);
+                  console.log(route.params.id)
+                  alert('Votre photo a bien été prise.')
+                  navigation.navigate('Home', {
+                    id: route.params.id,
+                    isPhotoTaken: true
+                  });
                 }
               }}>
               <View style={styleSheet.takePicButtonCircle1}>

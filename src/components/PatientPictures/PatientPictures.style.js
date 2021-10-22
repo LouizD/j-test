@@ -8,33 +8,22 @@ const styleSheet = StyleSheet.create({
     height: 'auto',
   },
   container: {
+    backgroundColor: colors.red3,
+    borderRadius: 20,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
     width: '100%',
     height: 'auto',
-    marginBottom: 10
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: '500',
-    color: colors.red1,
-  },
-  photoTitleContainer: {
-    backgroundColor: colors.red3,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
+    marginBottom: 10,
     padding: 5,
   },
   photoTitle: {
     color: colors.white,
+    fontSize: 14,
     fontWeight: '500',
     textAlign: 'center',
-  },
-  photoContainer: {
-    backgroundColor: "#FAFBFB",
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '10%'
   }
 });
 
